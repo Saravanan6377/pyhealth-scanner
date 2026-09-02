@@ -1,0 +1,64 @@
+name: Tests & Quality CI
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  test:
+    name: Test Python ${{ matrix.python-version }} on ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+        python-version: ["3.10", "3.11", "3.12", "3.13", "3.14"]
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Install PyHealth with [dev] dependencies
+        run: |
+          python -m pip install --upgrade pip setuptools wheel
+          python -m pip install -e ".[dev]"
+
+      - name: Run Ruff Lint Checks
+        run: |
+          python -m ruff check .
+
+      - name: Run Pytest Test Suite
+        run: |
+          pytest -v
+
+      - name: Build Package Artifacts
+        run: |
+          python -m pip install build
+          python -m build
+
+      - name: Test Clean Wheel Installation & CLI Smoke Test
+        run: |
+          python -m venv clean_env
+          # Activate clean environment
+          if [ "${{ runner.os }}" = "Windows" ]; then
+            source clean_env/Scripts/activate
+          else
+            source clean_env/bin/activate
+          fi
+          pip install dist/*.whl
+          pyhealth version
+          pyhealth scan .
+          pyhealth quality .
+          pyhealth security .
+          pyhealth complexity .
+          pyhealth deps .
+          pyhealth docs .
+          pyhealth git .
+          pyhealth report . --format json
+          pyhealth report . --format sarif
