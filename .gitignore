@@ -56,5 +56,5 @@ dmypy.json
 .pytype/
 
 # Generated reports / local archives
-reports/
+/reports/
 *.zip
