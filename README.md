@@ -3,8 +3,7 @@
 [![PyPI version](https://img.shields.io/pypi/v/pyhealth-scanner)](https://pypi.org/project/pyhealth-scanner/)
 [![Python](https://img.shields.io/pypi/pyversions/pyhealth-scanner)](https://pypi.org/project/pyhealth-scanner/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Project Status: Alpha](https://img.shields.io/badge/status-alpha-orange)](https://github.com/pyhealth-scanner/pyhealth-scanner)
-
+[![Status: Production Ready](https://img.shields.io/badge/status-production--ready-brightgreen)](https://github.com/Saravanan6377/pyhealth-scanner)
 **A unified Python project health analyzer.**
 
 PyHealth Scanner is a single command that inspects your Python project from every angle — code quality, security, dependencies, documentation, complexity, and more — and gives you an actionable health report.
@@ -201,7 +200,7 @@ Dependency analysis in PyHealth is designed to be safe, conservative, and non-de
 
 ## What PyHealth Will Do
 
-Once fully implemented, a single `pyhealth scan .` will:
+With PyHealth Scanner 2.0.0, a single `pyhealth scan .` can:
 
 - **Analyze code quality** — lint errors, style violations, and complexity hotspots.
 - **Audit security** — known vulnerability patterns and insecure coding practices.
@@ -256,7 +255,7 @@ Requires **Python 3.10 or later**.
 
 ```bash
 # Clone the repository
-git clone https://github.com/pyhealth-scanner/pyhealth-scanner.git
+git clone https://github.com/Saravanan6377/pyhealth-scanner.git
 cd pyhealth-scanner
 
 # Create and activate a virtual environment (recommended)
