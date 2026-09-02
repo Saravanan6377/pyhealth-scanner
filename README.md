@@ -224,7 +224,7 @@ pip install pyhealth-scanner
 ### From Source
 
 ```bash
-git clone https://github.com/pyhealth-scanner/pyhealth-scanner.git
+git clone https://github.com/Saravanan6377/pyhealth-scanner.git
 cd pyhealth-scanner
 pip install .
 ```
@@ -237,7 +237,7 @@ pip install .
 # Show version
 pyhealth version
 
-# Scan the current directory (full analysis — available in Stage 2+)
+# Scan the current directory
 pyhealth scan .
 
 # Scan a specific project
