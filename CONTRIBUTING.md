@@ -6,7 +6,7 @@ Thank you for your interest in contributing to PyHealth Scanner!
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/pyhealth-scanner/pyhealth-scanner.git
+   git clone https://github.com/Saravanan6377/pyhealth-scanner.git
    cd pyhealth-scanner
    ```
 

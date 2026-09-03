@@ -92,7 +92,7 @@ class SarifReporter(Reporter):
                         "driver": {
                             "name": "PyHealth Scanner",
                             "version": "2.0.0",
-                            "informationUri": "https://github.com/pyhealth-scanner/pyhealth-scanner",
+                            "informationUri": "https://github.com/Saravanan6377/pyhealth-scanner",
                             "rules": sorted_rules,
                         }
                     },

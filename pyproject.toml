@@ -56,10 +56,10 @@ dev = [
 pyhealth = "pyhealth.cli:app"
 
 [project.urls]
-Homepage = "https://github.com/pyhealth-scanner/pyhealth-scanner"
-Repository = "https://github.com/pyhealth-scanner/pyhealth-scanner"
-Issues = "https://github.com/pyhealth-scanner/pyhealth-scanner/issues"
-Changelog = "https://github.com/pyhealth-scanner/pyhealth-scanner/blob/main/CHANGELOG.md"
+Homepage = "https://github.com/Saravanan6377/pyhealth-scanner"
+Repository = "https://github.com/Saravanan6377/pyhealth-scanner"
+Issues = "https://github.com/Saravanan6377/pyhealth-scanner/issues"
+Changelog = "https://github.com/Saravanan6377/pyhealth-scanner/blob/main/CHANGELOG.md"
 
 [tool.hatch.build.targets.wheel]
 packages = ["pyhealth"]
