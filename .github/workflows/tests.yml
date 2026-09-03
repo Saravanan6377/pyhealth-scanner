@@ -43,6 +43,7 @@ jobs:
           python -m build
 
       - name: Test Clean Wheel Installation & CLI Smoke Test
+        shell: bash
         run: |
           python -m venv clean_env
           # Activate clean environment
